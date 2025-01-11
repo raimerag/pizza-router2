@@ -42,7 +42,6 @@ const NavBar = () => {
               </NavLink>
               <NavLink
                 className={token === false ? "nologin nav-link" : "nav-link"}
-                to="/logout"
                 onClick={() => logout()}
               >
                 🔒Logout

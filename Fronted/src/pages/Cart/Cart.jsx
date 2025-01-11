@@ -2,6 +2,7 @@ import { useContext, useMemo } from "react";
 import Button from "react-bootstrap/Button";
 import { Contexts } from "../../Context/MyContext";
 import { ContextUser } from "../../Context/UserContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const {
@@ -84,10 +85,13 @@ const Cart = () => {
           </div>
         </div>
         {novisible ? (
-          <div>
-            <h3 className="d-flex justify-content-center mt-5">
-              EL CARRITO ESTA VACIO
-            </h3>
+          <div className="d-flex justify-content-center mt-5">
+            <div className="text-center">
+              <h3 className=" mt-5">EL CARRITO ESTA VACIO</h3>
+              <Link to="/" className="nav-link mt-5">
+                <Button variant="dark">volver </Button>
+              </Link>
+            </div>
           </div>
         ) : (
           <div className="m-5">

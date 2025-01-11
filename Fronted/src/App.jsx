@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import Cart from "./pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
+
 import { ContextUser } from "./Context/UserContext";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        {/* <Route path="/logout" element={<Logout />} /> */}
         <Route
           path="/register"
           element={user === false ? <Register /> : <Navigate to="/home" />}
@@ -38,7 +40,6 @@ function App() {
         <Route path="/pizza/:id" element={<Pizza />} />
         <Route path="volver" element={<Home />} />
         <Route path="*" element={<NoFound />} />
-        <Route path="404" element={<NoFound />} />
       </Routes>
       <Footer />
     </>
