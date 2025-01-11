@@ -6,7 +6,7 @@ const MyContext = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const MAX_ITEMS = 10;
-  const MIN_ITEMS = 1;
+  const MIN_ITEMS = 0;
 
   function addToCart(item) {
     const itemExists = cart.findIndex((pizza) => pizza.id === item.id);

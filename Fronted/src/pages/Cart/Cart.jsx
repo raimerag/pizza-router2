@@ -90,7 +90,7 @@ const Cart = () => {
         </div>
       ) : (
         <div className="m-5">
-          <div className="d-grid gap-2">
+          <div className="d-flex justify-content-center">
             <Button variant="outline-danger" size="lg">
               {UserNoLogin ? (
                 <p>Por Favor Inicie Sesion</p>
